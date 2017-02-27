@@ -1,4 +1,4 @@
-package com.greenarkresorts.greenark;
+package com.greenarkresorts.greenark.activities;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.greenarkresorts.greenark.R;
 import org.joda.time.DateTime;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 

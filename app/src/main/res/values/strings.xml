@@ -3,4 +3,5 @@
     <string name="date">Date</string>
     <string name="null_value">null</string>
     <string name="brick_villa">Brick Villa</string>
+    <string name="edit_text">Edit %1$s</string>
 </resources>

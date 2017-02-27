@@ -5,4 +5,6 @@
     <color name="colorAccent">#335306</color>
     <color name="dateTextColor">#444441</color>
     <color name="borderColor">#727f04</color>
+    <color name="backgroundColor">#f0eccf</color>
+    <color name="opaque_borderColor">#4c727f04</color>
 </resources>
