@@ -3,17 +3,22 @@ package com.greenarkresorts.greenark.models;
 public class DetailModel {
     private String key;
     private String value;
+    private String type;
 
-    public DetailModel(String key, String value) {
-        setKey(key);
-        setValue(value);
+    public DetailModel() {
+    }
+
+    public DetailModel(String key, String value, String type) {
+        this.key = key;
+        this.value = value;
+        this.type = type;
     }
 
     public String getKey() {
         return key;
     }
 
-    private void setKey(String key) {
+    public void setKey(String key) {
         this.key = key;
     }
 
@@ -21,7 +26,11 @@ public class DetailModel {
         return value;
     }
 
-    private void setValue(String value) {
+    public void setValue(String value) {
         this.value = value;
+    }
+
+    public String getType() {
+        return type;
     }
 }

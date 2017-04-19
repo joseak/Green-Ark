@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">GreenArk</string>
+    <string name="app_name">GreenArk1</string>
     <string name="date">Date</string>
     <string name="null_value">null</string>
     <string name="brick_villa">Brick Villa</string>
     <string name="edit_text">Edit %1$s</string>
+    <string name="action_save">save</string>
+    <string name="action_settings">settings</string>
 </resources>

@@ -19,14 +19,13 @@ public class ResortActivity extends AppCompatActivity implements View.OnClickLis
     private Calendar calendar;
     private TextView dateTextField;
     private DatePickerDialog datePickerDialog;
-    private SimpleDateFormat df;
+    private SimpleDateFormat df = new SimpleDateFormat("dd MMM, yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resort);
         DateTime dateTime = new DateTime();
-        df = new SimpleDateFormat("dd MMM, yyyy");
         String formattedDate = df.format(dateTime.toDate());
 
         calendar = Calendar.getInstance();
@@ -35,13 +34,12 @@ public class ResortActivity extends AppCompatActivity implements View.OnClickLis
         dateTextField.setTextAppearance(this, android.R.style.TextAppearance_Large);
         dateTextField.setTextColor(getResources().getColor(R.color.dateTextColor));
         dateTextField.setText(formattedDate);
+        dateTextField.setOnClickListener(this);
 
         setDateTimeField();
     }
 
-    private void setDateTimeField() {
-        dateTextField.setOnClickListener(this);
-
+    public void setDateTimeField() {
         Calendar newCalendar = Calendar.getInstance();
         datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
@@ -69,7 +67,7 @@ public class ResortActivity extends AppCompatActivity implements View.OnClickLis
                 bricksVillaImageButton = (ImageButton) findViewById(R.id.brickVillaImageButton);
         String date = (String) dateTextField.getText();
         Bundle bundle = new Bundle();
-        bundle.putString("date", date);
+        bundle.putString("dateOfStay", date);
         if (view == superiorRoomImageButton) {
             bundle.putString("name", "Superior Room");
         } else if (view == superiorVillaImageButton) {
